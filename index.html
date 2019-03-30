@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Резюме</title>
+  <link rel="stylesheet" href="vendor/styles/fonts.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "GothamNarrow-Book", sans-serif;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    /* header */
+
+     .header {
+       position: relative;
+       height: 517px;
+     }
+
+     .header .title {
+       position: absolute;
+       left: 50%;
+       top: 60%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+     }
+
+     .header .title h1, .header .title p {
+       color: #fff;
+       white-space: nowrap;
+     }
+
+     .header .video-wrapper {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       background-image: url("../images/Video.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       overflow: hidden;
+     }
+
+     .header .bg-video {
+       min-width: 100%;
+     }
+
+     .header .logo-wrapper {
+       position: absolute;
+       left: 2.5vw;
+       top: 47px;
+       width: 150px;
+     }
+
+     .header .home-header-container {
+       position: absolute;
+       top: 20px;
+       right: 2.5vw;
+     }
+    
+     .header .nav-bar-links {
+       margin: 35px auto;
+       text-align: right;
+       letter-spacing: 1px;
+     }
+     
+     .header .nav-bar-link {
+       color: #fff;
+       font-weight: bold;
+       text-decoration: none;
+       text-transform: capitalize;
+     }
+
+     .header .nav-bar-link:hover {
+       text-decoration: underline;
+     }
+     
+     .header .divider {
+       color: #fff;
+       margin: 0 10px;
+     }
+
+     .header .mobile-nav-button {
+       position: absolute;
+       left: 8vw;
+       top: 44px;
+       color: #fff;
+       font-size: 28px;
+       display: none;
+       cursor: pointer;
+     }
+     /*  welcome */
+
+     .welcome {
+       text-align: center;
+       background-color: #eee;
+       padding: 82px 0 65px;
+     }
+
+     .welcome .icons {
+       margin-top: 64px;
+     }
+
+     .welcome .icon {
+       display: inline-block;
+       width: 33%;
+       vertical-align: top;
+     }
+ 
+     .welcome .icon h4 {
+       color: #007765;
+       font-family: GothamNarrow-Medium, serif;
+       margin: 0;
+       font-weight: 500;
+     }
+    
+     .welcome .icon strong {
+       font-family: GothamNarrow-Black, serif;
+     }
+    
+     .welcome .icon img {
+       margin: 34px auto 30px;
+       max-width: 140px;
+     }
+      /*  problem */
+
+     .problem {
+       text-align: center;
+       padding: 90px 0 120px;
+     }
+
+      .problem h2 {
+        margin-bottom: 74px;
+     }
+
+     .problem p, .problem h5 {
+        margin-bottom: 0.714em;
+        color: #565656;
+     }
+
+     .problem p.sub {
+       font-size: 16px;
+       letter-spacing: .5px;
+     }
+      /* tech  */
+
+     .tech {
+       background-color: #eee;
+       padding: 90px 0 120px;
+       text-align: center;
+     }
+
+     .tech h2 {
+       margin-bottom: 40px;
+     }
+
+     .tech h6 {
+       margin-bottom: 90px;
+     }
+
+     .tech .icon {
+       margin-bottom: 67px;
+     }
+
+     .tech .img-icon {
+       display: inline-block;
+       padding-top: 1em;
+       width: 33%;
+     }
+
+     .tech .img-icon img {
+       display: block;
+       max-width: 100%;
+       margin: 0 auto;
+       transform: scale(0.8);
+     }
+
+     .tech .dir-right p {
+        direction: rtl;
+        text-align: justify;
+     }
+
+     .tech .dir-left p {
+        text-align: justify;
+        direction: ltr;
+     }
+
+     .tech .icon .description {
+        display: inline-block;
+        vertical-align: top;
+        width: 66%;
+     }
+
+     .tech p.title {
+       color: #007765;
+       margin-bottom: 0.5em;
+     }
+      /*  team  */
+
+     .team {
+       text-align: center;
+       padding: 76px 0 96px;
+     } 
+
+     .team h2 {
+        margin-bottom: 10px;
+     }
+
+     .team h6 {
+        margin-bottom: 70px;
+     }
+
+     .team .photos-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+     }
+
+     .team .photo {
+        width: 297px;
+        margin-bottom: 48px;
+     }
+    
+     .team .photo:hover {
+        opacity: 0.4;
+     }
+
+     .team .img-photo {
+        margin-bottom: 30px;
+     }
+
+     .team p {
+        color: #007765;
+        font-size: 18px;
+        margin-bottom: 0;
+     }
+
+     .team i {
+         color: #565656;
+     }
+      /*  footer */
+
+     .footer {
+        text-align: center;
+        background-color: #3d3d3d;
+        min-height: 261px;
+     }
+
+     .social-icons {
+        padding: 50px 0;
+     }
+
+     .social-icons a {
+        text-decoration: none;
+     }
+
+     .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 50px;
+        margin: 0 6px;
+     }
+
+     .footer-icon {
+        color: #3d3d3d;
+        font-size: 30px;
+        vertical-align: middle;
+     } 
+
+     .footer-icon {
+        color: #3d3d3d;
+        font-size: 30px;
+        vertical-align: middle;
+     }
+
+     .footer-text {
+        width: 500px;
+        line-height: 22px;
+        margin: 30px auto;
+        font-size: 16px;
+        color: #fff;
+     }
+      /*  @media    */
+
+     @media (max-width: 1280px) {
+       h2 {
+         font-size: 67px;
+       }
+
+       h6 {
+         font-size: 25px;
+       }
+
+       h4 {
+         font-size: 25px;
+       }
+
+       .inner {
+         max-width: 95%;
+       }
+     }
+
+    @media (max-width: 1080px) {
+      h2 {
+        font-size: 67px;
+      }
+    
+      h5 {
+        font-size: 29px;
+      }
+    
+      .inner {
+        max-width: 90%;
+      }
+    
+      .header {
+        height: 420px;
+      }
+    
+      .header .logo-wrapper {
+        left: 50%;
+        top: 44px;
+        transform: translateX(-50%);
+      }
+    
+      .header .home-header-container {
+        top: 110px;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 14px;
+        letter-spacing: 0.7px;
+      }
+    
+      .welcome .icon {
+        float: none;
+        width: 45%;
+        display: inline-block;
+      }
+    
+      .welcome .icon:last-child {
+        margin-top: 64px;
+      }
+    
+      .welcome .icons {
+        text-align: center;
+      }
+    
+      .problem p {
+        font-size: 21px;
+        white-space: normal;
+      }
+    
+      .tech .icon {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+    
+      .tech .icon .description {
+        width: 100%;
+        order: 2;
+      }
+    
+      .tech .img-icon {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    
+      .tech .dir-right p,
+      .tech .dir-left p {
+        text-align: center;
+      }
+    
+      
+    }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 39px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
+      h5 {
+        font-size: 18px;
+      }
+
+      h6 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .inner {
+        max-width: 540px;
+      }
+
+      .tech h6 {
+        margin-bottom: 50px;
+      }
+
+      video {
+        display: none;
+      }
+
+      .header .nav-bar-links {
+        display: none;
+      }
+
+      .header .mobile-nav-button {
+        display: block;
+      }
+
+      .welcome {
+        background-color: #fff;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .welcome .content h3 {
+        font-size: 31px;
+      }
+
+      .inner {
+        max-width: 540px;
+      }
+
+      .welcome .icons {
+        margin-top: 30px;
+      }
+
+     .welcome .icon {
+        width: 100%;
+        background-color: #eee;
+        padding: 30px 0;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      .welcome .icon p {
+        font-size: 18px;
+      }
+
+      .welcome .icon:last-child {
+        margin-top: 0;
+      }
+
+      .problem p {
+        font-size: 16px;
+      }
+
+      .footer-text {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 639px) {
+       .inner {
+         max-width: 90%;
+       }
+     } 
+
+
+    </style>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/overlay.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="video-wrapper">
+    <video class="bg-video" 
+      src="videos/video.mp4" 
+      autoplay="" loop="" muted=""
+    ></video>
+  </div>
+  <div class="title">
+    <h1>Резюме</h1>
+    <p class="sub">Следуйте смело в будующее.</p>
+  </div>
+ 
+  <div class="home-header-container">
+    <div class="nav-bar-links">
+      <a class="nav-bar-link" href="#problem"> Контактные данные</a>
+      <span class="divider">|</span>
+      <a class="nav-bar-link tech-anchor" href="#tech">Образование</a>
+      <span class="divider">|</span>
+      <a class="nav-bar-link who-we-are-anchor" href="#team">Профессиональные навыки</a>
+    </div>
+  </div>
+  <div class="mobile-nav-button" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </div>
+</header>
+
+<div class="sections">
+
+    <div class="welcome">
+      <div class="inner">
+        <h3>Добро пожаловать в 	краткое изложение прошлого Латынцева Александра,  которое вы никогда не знали, но хотели бы узнать </h3>
+        <div class="icons">
+          <div class="icon ">
+            <h4><strong>Вы</strong> владеете моими данными </h4>
+            <img src="images/icon-data.png">
+            <p>Это закрытая информация</p>
+          </div>
+          <div class="icon ">
+            <h4><strong>Вы</strong> узнаете о моей личности</h4>
+            <img src="images/icon-identity.png">
+            <p> Личная информация не будет опубликована Вами </p>
+          </div>
+          <div class="icon ">
+            <h4><strong>Знание</strong> это сила</h4>
+            <img src="images/icon-power.png">
+            <p>Учться, учиться, учиться. Как завещал В.И.Ленин</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="problem">
+        <div class="inner">
+            <div class="content">
+                <h2 id="problem">Контактные данные</h2>
+                <h5>Латынцев Александр </h5>
+                <p>Дата рождения: <strong> 27 сентября 1972</strong> (46 лет)</p>
+                <p>Город: <strong> Кременчуг</strong></p>
+                <p>Место работы: <strong>  Полтавского подразделения
+                   ООО "НПК"ХОУМ-НЕТ"</strong> (интернет провайдер 
+                   HomeNet.ua)</p>
+                <p>Должность: <strong> Техник ВОЛС</strong></p>
+                <p>Контактный телефон: <strong> +38099 123 54 03 </strong></p>
+                <p>Электронная почта: <strong> alex.golubov.72@gmail.com </strong></p>
+                <p>Английский: <strong> Beginner (Basic)</strong></p>
+            </div>
+         </div>
+    </div>
+
+    <div class="tech">
+      <div class="inner">
+        <div class="content">
+          <h2 id="tech">Образование</h2>
+          <h6>Цель образования состоит в том, чтобы заменить ум незаполненный на ум, открытый для наполнения.</h6>
+          	<h6><i>Малкольм Форбс</i> </h6>
+    
+          <div class="icons">
+            <div class="icon">
+              <div class="img-icon">
+                <img src="images/icon-peer.png" alt="peer-to-peer">
+              </div>
+              <div class="description dir-right">
+                <p class="title"><strong>Комсомольский горно-металлургический техникум</strong></p>
+                <p>Год обучения:‎  <i> 1987-1991</i></p>
+                <p>Специальность:‎  <i> Горный техник </i></p>
+              </div>
+            </div>
+    
+            <div class="icon">
+              <div class="description dir-left">
+                <p class="title"><strong>Тюменский Юридический Институт  Тобольский Филиал Заочного Обучения</strong></p>
+                <p>Год обучения: <i> 1999-2004</i> </p>
+                <p>Специальность: <i> Правоведение</i> </p>
+              </div>
+              <div class="img-icon">
+                <img src="images/icon-compression.png" alt="compression">
+              </div>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     <div class="team">
+       <div class="inner">
+        <div class="content">
+          <h2 id="team"> Профессиональные Навыки</h2>
+          <h6>Курсы, самообразование</h6>
+            <div class="photos-wrapper">
+              <div class="photo who-we-are-info">
+                <div class="img-photo">
+                  <img src="images\photo-oleksandr.png"
+                    alt="photo-oleksandr.png "/>
+                </div>
+                <p>Александр Латынцев<br /><i>Ваш будущий ученик</i></p>
+              </div>              
+            </div>
+             <div class="icon">
+              <div class="img-icon">
+                <img src="images/icon-storage.png" alt="storage">
+              </div>
+              <div class="description dir-left">
+                <p class="title"><strong>Курсы</strong></p>
+                <p><i>BrainBasket Foundation </i></p>
+                <P><i>Foundations of programming</i></P>
+                <p><i>(based on Harvard CS50 course)</i></p>
+                <p><i>January 2019</i></p>
+                <p class="title"><strong>Меропиятия</strong></p>
+                <p>‎<i>AltexSoft Developer Community </i></p>
+                <P><i> UI & QA Meetup</i></P>
+                <p><i>Верстка со смыслом</i></p>
+                <p><i>Роль тестирования в цикле разработки ПО</i></p>
+                 <p class="title"><strong>Меропиятия</strong></p>
+                <p>‎<i>Beetroot Academy - Kremenchuk</i></p>
+                <P><i>Шлях в It BackEnd-розробника. Досвід PHP Team Lead</i></P>           
+                 <p class="title"><strong>Мастер-класс </strong></p>
+                <p>‎<i>JSExpert</i></p>
+                <P><i>"Как сверстать HTML макет"</i></P>   <p class="title"><strong>Мастер-класс </strong></p>
+                <p>‎<i>JSExpert</i></p>
+                <P><i> "Как написать первое приложение на JavaScript"</i></P>         
+              </div>
+            </div>
+         </div>
+       </div>
+     </div>
+
+     <footer class="footer">
+         <div class="social-icons">
+             <a href="#">            
+             <span class="icon-wrapper twitter">
+               <i class="fa fa-twitter footer-icon"></i>
+             </span>
+             </a>
+             <a href="#">
+             <span class="icon-wrapper facebook">
+               <i class="fa fa-facebook footer-icon"></i>
+             </span>
+             </a>
+             <a href="#">
+             <span class="icon-wrapper instagram">
+               <i class="fa fa-instagram footer-icon" aria-hidden="true"></i>
+             </span>
+             </a>
+         </div>
+         <p class="footer-text">
+             All other trademarks and copyrights are the property of their
+             respective owners. Use of these names, trademarks and brands does not
+             imply endorsement.
+         </p>
+     </footer>
+
+     <div id="myNav" class="overlay">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <div class="overlay-content">
+         <a href="#problem" onclick="closeNav()">Контактные Данные</a>
+         <a href="#tech" onclick="closeNav()">Образование</a>
+         <a href="#team" onclick="closeNav()">Профессиональные Навыки</a>
+       </div>
+     </div>
+     <script>
+       function openNav() {
+         document.getElementById("myNav").style.height = "100%";
+       }
+
+       function closeNav() {
+         document.getElementById("myNav").style.height = "0%";
+       }
+     </script>
+
+
+</div>
+
+</body>
+
+</html>
